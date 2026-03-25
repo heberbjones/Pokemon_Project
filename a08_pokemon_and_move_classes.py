@@ -35,5 +35,3 @@ class Pokemon :
 
 
 # Carl - Main program
-
-#test
