@@ -35,4 +35,55 @@ class Pokemon :
 
 
 # Carl - Main program
-#carl test asdfg again
+# Create 9 Move objects
+tackle = Move("Tackle", "Normal", 5, 20)
+quick_attack = Move("Quick Attack", "Normal", 6, 25)
+slash = Move("Slash", "Normal", 10, 30)
+flamethrower = Move("Flamethrower", "Fire", 5, 30)
+ember = Move("Ember", "Fire", 10, 20)
+water_gun = Move("Water Gun", "Water", 5, 15)
+hydro_pump = Move("Hydro Pump", "Water", 20, 25)
+vine_whip = Move("Vine Whip", "Grass", 10, 25)
+solar_beam = Move("Solar Beam", "Grass", 18, 27)
+
+#List of moves 
+# Put all 9 moves in a list
+move_list = [tackle, quick_attack, slash, flamethrower, ember,
+             water_gun, hydro_pump, vine_whip, solar_beam]
+
+#create a loop that runs through 3 times
+for i in range(3):
+    #Choose a random move from the move list
+    aSingleMove = random.choice(move_list)
+    #Print info about the random move
+    print(aSingleMove.get_info())
+    #Print the generated attack value
+    print(f"Generated attack value: {aSingleMove.generate_attack_value()}")
+    #remove the move so it is not repeated
+    move_list.remove(aSingleMove)
+
+#add a pause
+input("Press enter to continue...") 
+
+
+#make 3 pokemon objects
+oBulbasur = Pokemon("Bulbasaur", "Grass", 60)
+oCharmander = Pokemon("Charmander", "Fire", 55)
+oSquirtle = Pokemon("Squirtle", "Water", 65)
+
+#print charmander info before healing
+print(oCharmander.get_info())
+#call heal function
+oCharmander.heal()
+#print charmander info after healing
+print(oCharmander.get_info())
+
+#create a list of the pokemon objects to loop through
+pokemon_objects_list = [oBulbasur, oCharmander, oSquirtle]
+#for pokemon objects in list of pokemon objects, print their info
+for pokemon in pokemon_objects_list:
+    print(pokemon.get_info())
+
+
+
+
