@@ -1,4 +1,4 @@
-# Contributors: 
+# Contributors: Heber Jones, Carl Ripplinger, and Tyler Vanderwood
 # Main file for the Pokemon Project for IS 303
 
 import random
@@ -27,11 +27,11 @@ class Pokemon :
         self.Hit_points = iHit_points
 
     def get_info (self) :
-        return f'Name: {self.Name} | Element Type: {self.Elemental_type} | Hit Points: {self.Hit_points}'   
+        return f'{self.Name} - Type: {self.Elemental_type} -  Hit Points: {self.Hit_points}'   
 
     def heal (self) :
         self.Hit_points += 15
-        print(f'Updated Hit Points: {self.Hit_points}')     
+        print(f'{self.Name} has been healed to {self.Hit_points} hit points.')     
 
 
 # Carl - Main program
